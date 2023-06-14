@@ -3219,20 +3219,3 @@ input, select, textarea {
 			}
 
 	}
-	.btn{
-		background-color: transparent;
-		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #787878 !important;
-		cursor: pointer;
-		display: inline-block;
-		font-weight: 400;
-		height: calc(2.7em + 6px);
-		line-height: 2.7em;
-		min-width: 10em;
-		padding: 0 1.5em;
-		text-align: center;
-		text-decoration: none;
-		font-family: inherit;
-		margin-top: 1rem;
-	}
