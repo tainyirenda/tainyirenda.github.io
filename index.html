@@ -379,7 +379,55 @@
 
     }
 
+/* =====================================================
+   DESKTOP SIDEBAR HEIGHT / SCROLLING
+   ===================================================== */
+
+@media screen and (min-width: 981px) {
+
+    #header {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #header .inner {
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    #header .image.profile {
+        flex-shrink: 0;
+    }
+
+    #header .sidebar-heading,
+    #header .headline,
+    #header .certification-badges,
+    #header .tagline {
+        flex-shrink: 0;
+    }
+
+}
+
+/* =====================================================
+   CONTACT FORM SPACING
+   ===================================================== */
+
+#three form .actions {
+    margin-top: 1.25rem;
+}
+
+#three form textarea {
+    margin-bottom: 0;
+}
+		
 </style>
+	
 </head>
 
 
