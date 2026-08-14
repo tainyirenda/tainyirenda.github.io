@@ -30,208 +30,356 @@
          ===================================================== -->
     <style>
 
-        /* -------------------------
-           Profile image
-        ------------------------- */
+    /* =====================================================
+       SIDEBAR / HEADER LAYOUT
+       ===================================================== */
+
+    #header {
+        text-align: center;
+    }
+
+    #header .inner {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* -------------------------
+       Profile image
+       ------------------------- */
+
+    #header .image.profile {
+        display: block;
+
+        width: 220px;
+        height: auto;
+        max-width: 100%;
+
+        margin: 0 auto 1.75rem auto;
+
+        border-radius: 12px;
+    }
+
+
+    /* -------------------------
+       Name and job title
+       ------------------------- */
+
+    #header .sidebar-heading {
+        width: 100%;
+        margin: 0 0 1.4rem 0;
+
+        text-align: center;
+    }
+
+    #header .sidebar-heading h1 {
+        margin: 0;
+
+        font-size: 1.35rem;
+        font-weight: 600;
+        line-height: 1.3;
+
+        text-align: center;
+    }
+
+    #header .job-title {
+        margin: 0.3rem 0 0 0;
+
+        font-size: 1.1rem;
+        line-height: 1.4;
+
+        text-align: center;
+    }
+
+
+    /* -------------------------
+       AI specialisms
+       ------------------------- */
+
+    #header .headline {
+        width: 100%;
+        max-width: 290px;
+
+        margin: 0 auto 1.75rem auto;
+
+        font-size: 0.9rem;
+        line-height: 1.8;
+        letter-spacing: 0.02em;
+
+        text-align: center;
+    }
+
+    #header .headline span {
+        display: inline-block;
+        margin: 0 0.15rem;
+    }
+
+
+    /* -------------------------
+       Certification badges
+       ------------------------- */
+
+    #header .certification-badges {
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        max-width: 250px;
+
+        gap: 0.8rem;
+
+        margin: 0 auto 1.5rem auto;
+    }
+
+    #header .certification-badges img {
+        display: block;
+
+        width: 64px;
+        height: 64px;
+
+        object-fit: contain;
+
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* -------------------------
+       Sidebar tagline
+       ------------------------- */
+
+    #header .tagline {
+        width: 100%;
+        max-width: 280px;
+
+        margin: 0 auto;
+
+        font-size: 0.85rem;
+        line-height: 1.6;
+
+        font-style: italic;
+        text-align: center;
+    }
+
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    #one p {
+        line-height: 1.8;
+    }
+
+    #one .intro {
+        font-size: 1.15rem;
+    }
+
+
+
+    /* =====================================================
+       SKILLS / EXPERTISE
+       ===================================================== */
+
+    .expertise {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 0.5rem;
+
+        margin: 1.5rem 0 2rem;
+    }
+
+    .expertise span {
+        display: inline-block;
+
+        padding: 0.4rem 0.8rem;
+
+        border: 1px solid rgba(144, 144, 144, 0.3);
+        border-radius: 999px;
+
+        font-size: 0.85rem;
+    }
+
+
+
+    /* =====================================================
+       CURRENT ROLE
+       ===================================================== */
+
+    .current-role {
+        margin: 2rem 0;
+        padding: 1.5rem;
+
+        border-left: 3px solid #49bf9d;
+
+        background: rgba(144, 144, 144, 0.06);
+
+        border-radius: 0 8px 8px 0;
+    }
+
+    .current-role h3 {
+        margin: 0 0 0.75rem;
+    }
+
+    .current-role p {
+        margin-bottom: 0;
+    }
+
+
+
+    /* =====================================================
+       PROJECT CARDS
+       ===================================================== */
+
+    #two .row {
+        row-gap: 2rem;
+    }
+
+    #two article {
+        padding: 1rem;
+
+        border: 1px solid rgba(144, 144, 144, 0.2);
+        border-radius: 12px;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    #two article:hover {
+        transform: translateY(-4px);
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* -------------------------
+       Project images
+       ------------------------- */
+
+    #two .image.fit {
+        width: 100%;
+        height: 220px;
+
+        overflow: hidden;
+
+        border-radius: 8px;
+    }
+
+    #two .image.fit img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* -------------------------
+       Project titles
+       ------------------------- */
+
+    #two article h3 {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+
+
+    /* =====================================================
+       TABLET
+       ===================================================== */
+
+    @media screen and (max-width: 980px) {
+
+        #header {
+            text-align: center;
+        }
+
+        #header .inner {
+            text-align: center;
+        }
 
         #header .image.profile {
-            display: block;
-            width: 220px;
-            height: auto;
-            max-width: 100%;
+            width: 200px;
 
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 1.5rem;
-
-            border-radius: 12px;
         }
 
+        #header .sidebar-heading,
+        #header .sidebar-heading h1,
+        #header .job-title,
+        #header .headline,
+        #header .tagline {
+            text-align: center;
+        }
 
-        /* -------------------------
-           Header
-        ------------------------- */
+        #header .certification-badges {
+            justify-content: center;
+        }
 
-        #header h1 {
-            line-height: 1.4;
-            margin-bottom: 0.75rem;
+    }
+
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media screen and (max-width: 736px) {
+
+        #header .image.profile {
+            width: 180px;
+        }
+
+        #header .sidebar-heading h1 {
+            font-size: 1.25rem;
+        }
+
+        #header .job-title {
+            font-size: 1rem;
         }
 
         #header .headline {
-            font-size: 0.9rem;
-            letter-spacing: 0.04em;
-            margin-bottom: 1rem;
+            max-width: 270px;
+
+            font-size: 0.85rem;
+            line-height: 1.7;
         }
-
-        #header .tagline {
-            font-style: italic;
-            margin-top: 1rem;
-        }
-
-
-        /* -------------------------
-           Certification badges
-        ------------------------- */
 
         #header .certification-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.6rem;
+            max-width: 240px;
 
-            margin: 1.25rem 0;
+            gap: 0.7rem;
         }
 
         #header .certification-badges img {
-            width: 64px;
-            height: 64px;
-            object-fit: contain;
+            width: 60px;
+            height: 60px;
         }
 
-
-        /* -------------------------
-           About
-        ------------------------- */
-
-        #one p {
-            line-height: 1.8;
-        }
-
-        #one .intro {
-            font-size: 1.15rem;
-        }
-
-
-        /* -------------------------
-           Skills
-        ------------------------- */
-
-        .expertise {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-
-            margin: 1.5rem 0 2rem;
-        }
-
-        .expertise span {
-            display: inline-block;
-
-            padding: 0.4rem 0.8rem;
-
-            border: 1px solid rgba(144, 144, 144, 0.3);
-            border-radius: 999px;
-
-            font-size: 0.85rem;
-        }
-
-
-        /* -------------------------
-           Current role
-        ------------------------- */
-
-        .current-role {
-            margin: 2rem 0;
-            padding: 1.5rem;
-
-            border-left: 3px solid #49bf9d;
-            background: rgba(144, 144, 144, 0.06);
-
-            border-radius: 0 8px 8px 0;
-        }
-
-        .current-role h3 {
-            margin: 0 0 0.75rem;
-        }
-
-        .current-role p {
-            margin-bottom: 0;
-        }
-
-
-        /* -------------------------
-           Project cards
-        ------------------------- */
-
-        #two .row {
-            row-gap: 2rem;
-        }
-
-        #two article {
-            padding: 1rem;
-
-            border: 1px solid rgba(144, 144, 144, 0.2);
-            border-radius: 12px;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        #two article:hover {
-            transform: translateY(-4px);
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.08);
+        #header .tagline {
+            font-size: 0.8rem;
         }
 
         #two .image.fit {
-            width: 100%;
-            height: 220px;
-
-            overflow: hidden;
-
-            border-radius: 8px;
+            height: 200px;
         }
 
-        #two .image.fit img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
+        .current-role {
+            padding: 1.25rem;
         }
 
-        #two article h3 {
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-        }
+    }
 
-
-        /* -------------------------
-           Mobile
-        ------------------------- */
-
-        @media screen and (max-width: 980px) {
-
-            #header .image.profile {
-                width: 200px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-        }
-
-        @media screen and (max-width: 736px) {
-
-            #header .image.profile {
-                width: 180px;
-            }
-
-            #two .image.fit {
-                height: 200px;
-            }
-
-            .certification-badges {
-                justify-content: center;
-            }
-
-            .current-role {
-                padding: 1.25rem;
-            }
-
-        }
-
-    </style>
+</style>
 </head>
 
 
@@ -243,77 +391,36 @@
          ===================================================== -->
 
     <header id="header">
+    <div class="inner sidebar-content">
 
-        <div class="inner">
+        <img
+            class="image profile"
+            src="images/TN2.jpg"
+            alt="Portrait of Tai Nyirenda"
+        />
 
-            <!-- Profile Picture -->
-
-            <img
-                class="image profile"
-                src="images/TN2.jpg"
-                alt="Portrait of Tai Nyirenda"
-            />
-
-
-            <!-- Name & Role -->
-
-            <h1>
-                <strong>Tai Nyirenda</strong>
-                <br />
-                Senior AI Engineer
-            </h1>
-
-
-            <p class="headline">
-                AI Engineering · LLMs · Generative AI · LegalTech
-            </p>
-
-
-            <!-- Certifications -->
-
-            <div class="certification-badges">
-
-                <img
-                    src="https://images.credly.com/size/680x680/images/61f56aa4-16fd-403c-90bc-1d90dba1fa99/image.png"
-                    alt="Microsoft Certified Azure AI Engineer Associate"
-                    title="Microsoft Certified: Azure AI Engineer Associate"
-                />
-
-                <img
-                    src="https://images.credly.com/size/680x680/images/619f60f8-4f63-4772-910e-dc31c6f2f7e8/image.png"
-                    alt="Microsoft Certified Power BI Data Analyst Associate"
-                    title="Microsoft Certified: Power BI Data Analyst Associate"
-                />
-
-                <img
-                    src="https://images.credly.com/size/680x680/images/5c8fca38-b0d2-49e5-9ad2-f3f8e79b327f/azure-data-scientist-associate-600x600.png"
-                    alt="Microsoft Certified Azure Data Scientist Associate"
-                    title="Microsoft Certified: Azure Data Scientist Associate"
-                />
-
-                <img
-                    src="https://images.credly.com/size/680x680/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png"
-                    alt="Google Data Analytics Professional Certificate"
-                    title="Google Data Analytics Professional Certificate"
-                />
-
-                <img
-                    src="https://images.credly.com/size/680x680/images/7b2c708c-a3e1-4c7f-985c-b6b62a5b1db8/image.png"
-                    alt="AWS Partner Accreditation"
-                    title="AWS Partner Accreditation"
-                />
-
-            </div>
-
-
-            <p class="tagline">
-                A Detective. An Explorer. An Artist.
-            </p>
-
+        <div class="sidebar-heading">
+            <h1>Tai Nyirenda</h1>
+            <p class="job-title">Senior AI Engineer</p>
         </div>
 
-    </header>
+        <p class="headline">
+            AI Engineering <span>·</span>
+            LLMs <span>·</span>
+            Generative AI <span>·</span>
+            LegalTech
+        </p>
 
+        <div class="certification-badges">
+            <!-- keep your existing badge images here -->
+        </div>
+
+        <p class="tagline">
+            A Detective. An Explorer. An Artist.
+        </p>
+
+    </div>
+</header>
 
 
     <!-- =====================================================
